@@ -1,0 +1,22 @@
+.left-navigation-container {
+  height: 100%;
+  padding: $large;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $large;
+  border-radius: $default-border-radius;
+  box-sizing: border-box;
+  background-color: $container-color;
+
+  .logo {
+    width: 100%;
+  }
+
+  .links {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: $large;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+}

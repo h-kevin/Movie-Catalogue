@@ -1,0 +1,10 @@
+.filters-container {
+  @import "../SearchMovie/SearchMovie.scss";
+  @import "../FilterByGenre/FilterByGenre.scss";
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $large;
+  background-color: $default-background-color;
+  align-items: center;
+}

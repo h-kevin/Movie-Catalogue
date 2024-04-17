@@ -1,0 +1,10 @@
+.top-box-office-container {
+  @import "./components/TopBoxOfficeMovies/TopBoxOfficeMovies.scss";
+
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  gap: $large;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}

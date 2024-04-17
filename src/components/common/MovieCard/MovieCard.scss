@@ -1,0 +1,81 @@
+.movie-card-container {
+  background-color: $container-color;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $small;
+  padding: $small;
+  border-radius: 1em;
+  cursor: pointer;
+  user-select: none;
+
+  .image {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1em;
+  }
+
+  .meta {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: $small;
+
+    .title-and-rating {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: $small;
+      position: relative;
+
+      .tooltip-for-title {
+        overflow: hidden;
+
+        &:hover::after {
+          margin: 0;
+        }
+
+        .title {
+          font-size: 0.875em;
+          font-family: $ttw-semi-bold;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+
+      .rating {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: $small;
+        font-size: 0.75em;
+        font-family: $ttw-light;
+        white-space: nowrap;
+
+        svg {
+          width: 1.2em;
+          height: 1.2em;
+
+          path {
+            fill: $star-color;
+          }
+        }
+      }
+    }
+
+    .genres {
+      font-size: 0.75em;
+      font-family: $ttw-light;
+      color: $faded-font-color;
+    }
+
+    .year {
+      font-size: 0.75em;
+      font-family: $ttw-light;
+      color: $font-color-light;
+      margin-top: auto;
+    }
+  }
+}

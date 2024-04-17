@@ -1,0 +1,13 @@
+.app-layout-container {
+  @import "./components/NavigationLink/NavigationLink.scss";
+  @import "./components/LeftNavigation/LeftNavigation.scss";
+
+  height: 100%;
+  padding: $large;
+  display: grid;
+  grid-template-columns: max-content minmax(0, auto);
+  grid-template-rows: minmax(0, 1fr);
+  gap: $large;
+  position: relative;
+  box-sizing: border-box;
+}

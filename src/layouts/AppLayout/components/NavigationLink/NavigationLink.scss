@@ -1,0 +1,38 @@
+.link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  box-sizing: border-box;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    -webkit-user-drag: none;
+    padding: $small;
+    border-radius: 1em;
+    transition: $default-transition;
+    box-sizing: border-box;
+
+    &.active {
+      background-color: $color-primary;
+
+      svg path {
+        stroke: $container-color;
+        fill: $container-color;
+      }
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      transition: $default-transition;
+
+      path {
+        stroke: $default-font-color;
+      }
+    }
+  }
+}

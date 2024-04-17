@@ -1,0 +1,31 @@
+.favorite-icon-container {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: $small;
+  margin: $small;
+  box-sizing: border-box;
+  background-color: $default-font-color-transparent;
+  border: 1px solid $default-font-color;
+  border-radius: 0.9em;
+  backdrop-filter: blur(5px);
+  transition: $default-transition;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+
+    &.filled path {
+      fill: $heart-color;
+    }
+
+    &.outlined path {
+      fill: $default-font-color;
+    }
+  }
+}

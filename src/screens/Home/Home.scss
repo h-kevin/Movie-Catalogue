@@ -1,0 +1,11 @@
+.home-container {
+  @import "./components/Filters/Filters.scss";
+  @import "./components/PopularMovies/PopularMovies.scss";
+
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  gap: $large;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}

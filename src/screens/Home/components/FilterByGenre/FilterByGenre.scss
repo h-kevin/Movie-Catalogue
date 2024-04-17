@@ -1,0 +1,28 @@
+.filter-by-genre-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $medium;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+
+  .genre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    background-color: $container-color;
+    border-radius: 1em;
+    padding: $medium;
+    cursor: pointer;
+    transition: $default-transition;
+    white-space: nowrap;
+    user-select: none;
+
+    &.active {
+      background-color: $color-primary;
+      color: $container-color;
+      font-weight: bold;
+    }
+  }
+}

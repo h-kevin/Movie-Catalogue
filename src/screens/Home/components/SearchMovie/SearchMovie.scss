@@ -1,0 +1,46 @@
+.search-movie-container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: $medium;
+  border-radius: 1em;
+  background-color: $container-color;
+  color: $default-font-color;
+  transition: $default-transition;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+  gap: $small;
+
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 0;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+
+    // TODO: Apply color for placeholder
+    // &::placeholder {
+    //   color: $default-font-color-transparent;
+    // }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    background-color: $color-primary;
+    border-radius: 1em;
+    padding: $small;
+    margin: calc(0rem - $small);
+    margin-left: 0;
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

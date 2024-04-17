@@ -1,0 +1,10 @@
+.top-movies-container {
+  @import "./components/TopMoviesList/TopMoviesList.scss";
+
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  gap: $large;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
