@@ -1,0 +1,18 @@
+.title-group-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: $medium;
+
+  h1 {
+    font-size: 1.25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .favorite-icon-container {
+    margin: 0;
+  }
+}

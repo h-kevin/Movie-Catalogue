@@ -1,6 +1,6 @@
 .home-container {
   @import "./components/Filters/Filters.scss";
-  @import "./components/PopularMovies/PopularMovies.scss";
+  @import "./components/NowPlayingMovies/NowPlayingMovies.scss";
 
   display: flex;
   flex-flow: column nowrap;

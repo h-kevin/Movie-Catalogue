@@ -1,0 +1,15 @@
+.data-rows-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $small;
+
+  .info {
+    font-size: 0.9em;
+    font-family: $ttw-light;
+    color: $font-color-light;
+  }
+
+  .production-companies {
+    white-space: pre-wrap;
+  }
+}

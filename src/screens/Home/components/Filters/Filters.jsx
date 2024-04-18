@@ -3,11 +3,11 @@ import React from "react";
 import SearchMovie from "../SearchMovie/SearchMovie";
 import FilterByGenre from "../FilterByGenre/FilterByGenre";
 
-const Filters = () => {
+const Filters = ({ filterByGenres }) => {
   return (
     <div className="filters-container">
       <SearchMovie />
-      <FilterByGenre />
+      <FilterByGenre filterByGenres={filterByGenres} />
     </div>
   );
 };

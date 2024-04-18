@@ -1,9 +1,14 @@
+export const routeParts = {
+  DETAILS: "details",
+};
+
 const routes = {
   ROOT: "/",
   HOME: "home",
   FAVORITES: "favorites",
-  TOP_BOX_OFFICE: "top-box-office",
+  POPULAR_MOVIES: "popular-movies",
   TOP_MOVIES: "top-movies",
+  MOVIE_DETAILS: `${routeParts.DETAILS}/:movieId`,
   NOT_FOUND: "*",
 };
 

@@ -14,15 +14,14 @@
     background-color: $container-color;
     border-radius: 1em;
     padding: $medium;
-    cursor: pointer;
-    transition: $default-transition;
     white-space: nowrap;
+    cursor: pointer;
     user-select: none;
+    transition: $default-transition;
 
     &.active {
       background-color: $color-primary;
       color: $container-color;
-      font-weight: bold;
     }
   }
 }

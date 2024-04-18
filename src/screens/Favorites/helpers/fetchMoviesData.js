@@ -1,10 +1,10 @@
-import popularMoviesMock from "../popularMoviesMock.json";
+import favoriteMoviesMock from "../favoriteMoviesMock.json";
 
 const fetchMoviesData = async (movieIds, onSuccess, onError) => {
   try {
     const request = new Promise((resolve) => {
       setTimeout(() => {
-        resolve(popularMoviesMock);
+        resolve(favoriteMoviesMock);
       }, 1000);
     });
 

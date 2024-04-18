@@ -1,0 +1,10 @@
+.popular-movies-container {
+  @import "./components/PopularMoviesList/PopularMoviesList.scss";
+
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  gap: $large;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}

@@ -1,0 +1,19 @@
+.close-modal-icon {
+  position: absolute;
+  right: #{-$large + $medium};
+  top: #{-$large + $medium};
+  font-size: 1.2em;
+  width: 2em;
+  height: 2em;
+  stroke: $default-font-color;
+  cursor: pointer;
+  background-color: $default-background-color;
+  border-radius: 50%;
+  padding: $small;
+  box-sizing: border-box;
+  z-index: 1;
+
+  path {
+    fill: $default-font-color;
+  }
+}

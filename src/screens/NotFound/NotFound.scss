@@ -1,0 +1,42 @@
+.not-found-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: $large;
+  box-sizing: border-box;
+  text-align: center;
+
+  h1,
+  p,
+  a {
+    color: $default-font-color;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-family: $ttw-black;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-family: $ttw-regular;
+  }
+
+  a {
+    font-size: 1.25rem;
+    font-family: $ttw-light;
+    background-color: $container-color;
+    padding: $small $medium;
+    border-radius: $default-border-radius;
+    transition: $default-transition;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: lighten($container-color, 10%);
+    }
+  }
+}

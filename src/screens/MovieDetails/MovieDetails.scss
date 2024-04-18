@@ -1,0 +1,11 @@
+.movie-details-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $medium;
+  position: relative;
+
+  @import "./components/CloseButton/CloseButton.scss";
+  @import "./components/VideoPlayer/VideoPlayer.scss";
+  @import "./components/TitleGroup/TitleGroup.scss";
+  @import "./components/DataRows/DataRows.scss";
+}

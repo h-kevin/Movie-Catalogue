@@ -1,18 +1,29 @@
 import React from "react";
 import dayjs from "dayjs";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 import useTopMovies from "../../hooks/useTopMovies";
+import LoadingIndicator from "../../../../components/common/LoadingIndicator/LoadingIndicator";
+import NoContent from "../../../../components/common/NoContent/NoContent";
 import MovieCard from "../../../../components/common/MovieCard/MovieCard";
 import imageUrlParts from "../../../../constants/imageUrlParts";
 import movieGenres from "../../../../constants/movieGenres";
+import { routeParts } from "../../../../constants/routes";
 
 const TopMoviesList = () => {
+  const navigate = useNavigate();
+
   const { favoriteMovieIds, toggleFavorite } = useOutletContext();
 
   const { topMovies, loading } = useTopMovies();
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) {
+    return <LoadingIndicator />;
+  }
+
+  if (!topMovies?.length) {
+    return <NoContent message="No movies to show!" />;
+  }
 
   return (
     <div className="top-movies-list-container">
@@ -28,6 +39,7 @@ const TopMoviesList = () => {
           image={`${imageUrlParts.BASE_URL}${movie.poster_path}`}
           isFavorite={favoriteMovieIds?.includes(movie.id)}
           toggleFavorite={() => toggleFavorite(movie.id)}
+          onClick={() => navigate(`${routeParts.DETAILS}/${movie.id}`)}
         />
       ))}
     </div>

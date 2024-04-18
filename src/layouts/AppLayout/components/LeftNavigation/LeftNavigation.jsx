@@ -30,7 +30,7 @@ const LeftNavigation = () => {
           iconOutlined={<HeartOutlined />}
         />
         <NavigationLink
-          to={`${routes.ROOT}${routes.TOP_BOX_OFFICE}`}
+          to={`${routes.ROOT}${routes.POPULAR_MOVIES}`}
           iconFilled={<BoxOfficeFilled />}
           iconOutlined={<BoxOfficeOutlined />}
         />

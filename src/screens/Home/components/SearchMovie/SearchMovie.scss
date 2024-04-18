@@ -6,9 +6,11 @@
   background-color: $container-color;
   color: $default-font-color;
   transition: $default-transition;
+  font-family: $ttw-regular;
   font-size: 0.75rem;
   box-sizing: border-box;
   gap: $small;
+  position: relative;
 
   input {
     font-family: inherit;
@@ -19,10 +21,9 @@
     background-color: transparent;
     color: inherit;
 
-    // TODO: Apply color for placeholder
-    // &::placeholder {
-    //   color: $default-font-color-transparent;
-    // }
+    &::placeholder {
+      color: $default-font-color-transparent;
+    }
   }
 
   button {
@@ -43,4 +44,6 @@
       height: 1em;
     }
   }
+
+  @import "../Dropdown/Dropdown.scss";
 }
