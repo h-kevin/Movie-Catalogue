@@ -13,8 +13,8 @@ const useMovieDetails = (movieId) => {
 
       fetchMovieDetails(
         movieId,
-        (movies) => {
-          setMovieDetails(movies);
+        (movieData) => {
+          setMovieDetails(movieData);
           setError(null);
           setLoading(false);
         },
