@@ -1,6 +1,7 @@
+import fetchMovieDetails from "../../MovieDetails/helpers/fetchMovieDetails";
 import favoriteMoviesMock from "../favoriteMoviesMock.json";
 
-const fetchMoviesData = async (movieIds, onSuccess, onError) => {
+export const mockFetchMoviesData = async (movieIds, onSuccess, onError) => {
   try {
     const request = new Promise((resolve) => {
       setTimeout(() => {
@@ -15,6 +16,36 @@ const fetchMoviesData = async (movieIds, onSuccess, onError) => {
     onSuccess(moviesData);
   } catch {
     onError("Error fetching movies data");
+  }
+};
+
+const fetchMoviesData = async (movieIds, onSuccess, onError) => {
+  try {
+    const results = [];
+    const errors = [];
+
+    const requests = movieIds.map((movieId) =>
+      fetchMovieDetails(
+        movieId,
+        (movieDetails) => results.push(movieDetails),
+        (errorMessage) => errors.push(errorMessage)
+      )
+    );
+
+    await Promise.allSettled(requests);
+
+    if (errors.length) {
+      throw new Error(`\n${errors.join("\n")}`);
+    }
+
+    onSuccess(
+      results.sort(
+        (movieA, movieB) =>
+          movieIds.indexOf(movieA.id) - movieIds.indexOf(movieB.id)
+      )
+    );
+  } catch (error) {
+    onError(`Request failed:${error.message}`);
   }
 };
 

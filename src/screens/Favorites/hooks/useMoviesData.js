@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import fetchMoviesData from "../helpers/fetchMoviesData";
+import { mockFetchMoviesData } from "../helpers/fetchMoviesData";
 
 const useMoviesData = (movieIds) => {
   const [moviesData, setMoviesData] = useState();
@@ -11,7 +11,7 @@ const useMoviesData = (movieIds) => {
     if (movieIds?.length) {
       setLoading(true);
 
-      fetchMoviesData(
+      mockFetchMoviesData(
         movieIds,
         (data) => {
           setMoviesData(data);

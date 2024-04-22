@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import fetchPopularMovies from "../helpers/fetchPopularMovies";
+import { mockFetchPopularMovies } from "../helpers/fetchPopularMovies";
 
 const usePopularMovies = () => {
   const [popularMovies, setPopularMovies] = useState();
@@ -11,7 +11,7 @@ const usePopularMovies = () => {
     if (!popularMovies) {
       setLoading(true);
 
-      fetchPopularMovies(
+      mockFetchPopularMovies(
         (movies) => {
           setPopularMovies(movies);
           setError(null);

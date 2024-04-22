@@ -18,10 +18,10 @@ const searchMovie = async (query, onSuccess, onError) => {
           }));
 
         setTimeout(() => {
-          console.log(filteredMovieResults);
           resolve(filteredMovieResults);
         }, 1000);
       });
+
       const response = await request;
 
       onSuccess(response);
