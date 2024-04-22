@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { mockFetchMovieDetails } from "../helpers/fetchMovieDetails";
+import fetchMovieDetails from "../helpers/fetchMovieDetails";
 
 const useMovieDetails = (movieId) => {
   const [movieDetails, setMovieDetails] = useState();
@@ -11,7 +11,7 @@ const useMovieDetails = (movieId) => {
     if (movieId) {
       setLoading(true);
 
-      mockFetchMovieDetails(
+      fetchMovieDetails(
         movieId,
         (movieData) => {
           setMovieDetails(movieData);
@@ -21,7 +21,9 @@ const useMovieDetails = (movieId) => {
         (errorMessage) => {
           setError(errorMessage);
           setLoading(false);
-        }
+        },
+        true,
+        true
       );
     }
   }, [movieId]);

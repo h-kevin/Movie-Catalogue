@@ -3,7 +3,13 @@ import movieDetailsMock from "../movieDetailsMock.json";
 import fetchMovieCast from "./fetchMovieCast";
 import fetchMovieVideos from "./fetchMovieVideos";
 
-export const mockFetchMovieDetails = async (movieId, onSuccess, onError) => {
+export const mockFetchMovieDetails = async (
+  movieId,
+  onSuccess,
+  onError,
+  includeVideos = false,
+  includeCast = false
+) => {
   try {
     const requestMovieDetails = new Promise((resolve) => {
       setTimeout(() => {
@@ -17,12 +23,18 @@ export const mockFetchMovieDetails = async (movieId, onSuccess, onError) => {
 
     const movieCast = await fetchMovieCast(movieId);
 
-    onSuccess({
-      ...movieDetails,
-      videos: movieVideos,
-      cast: movieCast.cast,
-      crew: movieCast.crew,
-    });
+    const response = { ...movieDetails };
+
+    if (includeVideos) {
+      response.videos = movieVideos;
+    }
+
+    if (includeCast) {
+      response.cast = movieCast.cast;
+      response.crew = movieCast.crew;
+    }
+
+    onSuccess(response);
   } catch {
     onError("Error fetching movie details");
   }

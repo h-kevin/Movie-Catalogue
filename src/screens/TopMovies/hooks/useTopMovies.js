@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { mockFetchTopMovies } from "../helpers/fetchTopMovies";
+import fetchTopMovies from "../helpers/fetchTopMovies";
 
 const useTopMovies = () => {
   const [topMovies, setTopMovies] = useState();
@@ -11,7 +11,7 @@ const useTopMovies = () => {
     if (!topMovies) {
       setLoading(true);
 
-      mockFetchTopMovies(
+      fetchTopMovies(
         (movies) => {
           setTopMovies(movies);
           setError(null);

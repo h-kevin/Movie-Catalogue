@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-import { mockFetchNowPlayingMovies } from "../helpers/fetchNowPlayingMovies";
+import fetchNowPlayingMovies from "../helpers/fetchNowPlayingMovies";
 import fetchMoviesFilteredByGenresDebounced from "../helpers/fetchMoviesFilteredByGenres";
 
 const useNowPlayingMovies = () => {
@@ -32,7 +32,7 @@ const useNowPlayingMovies = () => {
     if (!nowPlayingMovies) {
       setLoading(true);
 
-      mockFetchNowPlayingMovies(
+      fetchNowPlayingMovies(
         (movies) => {
           setNowPlayingMovies(movies);
           setError(null);
