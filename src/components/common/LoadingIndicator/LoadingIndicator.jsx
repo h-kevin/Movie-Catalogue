@@ -1,5 +1,3 @@
-import React from "react";
-
 const LoadingIndicator = ({ message, customClass }) => {
   return (
     <div className={`loading-indicator-container ${customClass || ""}`}>

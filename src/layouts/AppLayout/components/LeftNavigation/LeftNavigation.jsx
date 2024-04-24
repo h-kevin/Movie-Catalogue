@@ -1,5 +1,3 @@
-import React from "react";
-
 import Logo from "../../../../assets/images/logo.svg?react";
 import NavigationLink from "../NavigationLink/NavigationLink";
 import HomeFilled from "../../../../assets/icons/home-filled.svg?react";

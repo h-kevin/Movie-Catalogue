@@ -17,7 +17,7 @@ const useFavoriteMovies = () => {
 
       setFavoriteMovieIds(favoriteMovieIdsFromLocalStorage);
     }
-  }, []);
+  }, [favoriteMovieIds]);
 
   return {
     favoriteMovieIds,

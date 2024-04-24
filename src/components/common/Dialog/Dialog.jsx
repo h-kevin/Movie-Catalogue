@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const Dialog = ({ children, open, onClose }) => {
   const dialogRef = useRef(null);
@@ -18,7 +18,7 @@ const Dialog = ({ children, open, onClose }) => {
       dialogRef.current?.scrollTo({ top: 0 });
       dialogRef.current?.classList.add("open");
     }
-  }, [open]);
+  }, [onClose, open]);
 
   return (
     <dialog

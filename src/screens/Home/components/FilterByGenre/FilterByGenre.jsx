@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import movieGenres from "../../../../constants/movieGenres";
 
 const FilterByGenre = ({ filterByGenres }) => {
@@ -21,7 +21,7 @@ const FilterByGenre = ({ filterByGenres }) => {
     if (selectedGenres) {
       filterByGenres(selectedGenres);
     }
-  }, [selectedGenres]);
+  }, [filterByGenres, selectedGenres]);
 
   return (
     <ul className="filter-by-genre-container">

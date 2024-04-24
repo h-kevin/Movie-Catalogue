@@ -1,5 +1,3 @@
-import React from "react";
-
 import SearchMovie from "../SearchMovie/SearchMovie";
 import FilterByGenre from "../FilterByGenre/FilterByGenre";
 

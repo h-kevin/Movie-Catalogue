@@ -1,5 +1,3 @@
-import React from "react";
-
 const VideoPlayer = ({ trailerUrl }) => (
   <div className="video-player-container">
     <iframe

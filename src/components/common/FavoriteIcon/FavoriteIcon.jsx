@@ -1,5 +1,3 @@
-import React from "react";
-
 import HeartFilled from "../../../assets/icons/heart-filled.svg?react";
 
 const FavoriteIcon = ({ isFavorite, toggleFavorite, customClass }) => {

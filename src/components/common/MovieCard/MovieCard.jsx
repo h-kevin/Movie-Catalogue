@@ -1,5 +1,3 @@
-import React from "react";
-
 import Tooltip from "../Tooltip/Tooltip";
 import StarFilled from "../../../assets/icons/star-filled.svg?react";
 import FavoriteIcon from "../FavoriteIcon/FavoriteIcon";

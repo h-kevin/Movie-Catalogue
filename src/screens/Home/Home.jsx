@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet, useOutletContext } from "react-router-dom";
 
 import useNowPlayingMovies from "./hooks/useNowPlayingMovies";

@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 import Tooltip from "../../../../components/common/Tooltip/Tooltip";
@@ -8,10 +7,9 @@ const NavigationLink = ({ to, iconFilled, iconOutlined }) => {
   return (
     <li className="link-container">
       <Tooltip text={navItems[to]}>
-        <NavLink
-          to={to}
-          children={({ isActive }) => (isActive ? iconFilled : iconOutlined)}
-        />
+        <NavLink to={to}>
+          {({ isActive }) => (isActive ? iconFilled : iconOutlined)}
+        </NavLink>
       </Tooltip>
     </li>
   );

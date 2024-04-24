@@ -1,5 +1,3 @@
-import React from "react";
-
 import useMovieResults from "../../hooks/useMovieResults";
 import { routeParts } from "../../../../constants/routes";
 import SearchOutlined from "../../../../assets/icons/search-outlined.svg?react";

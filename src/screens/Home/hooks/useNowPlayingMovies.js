@@ -8,25 +8,22 @@ const useNowPlayingMovies = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const filterByGenres = useCallback(
-    (genres) => {
-      setLoading(true);
+  const filterByGenres = useCallback((genres) => {
+    setLoading(true);
 
-      fetchMoviesFilteredByGenresDebounced(
-        genres,
-        (filteredMovies) => {
-          setNowPlayingMovies(filteredMovies);
-          setError(null);
-          setLoading(false);
-        },
-        (errorMessage) => {
-          setError(errorMessage);
-          setLoading(false);
-        }
-      );
-    },
-    [nowPlayingMovies]
-  );
+    fetchMoviesFilteredByGenresDebounced(
+      genres,
+      (filteredMovies) => {
+        setNowPlayingMovies(filteredMovies);
+        setError(null);
+        setLoading(false);
+      },
+      (errorMessage) => {
+        setError(errorMessage);
+        setLoading(false);
+      }
+    );
+  }, []);
 
   useEffect(() => {
     if (!nowPlayingMovies) {

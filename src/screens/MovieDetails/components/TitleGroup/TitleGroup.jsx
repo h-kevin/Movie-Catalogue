@@ -1,5 +1,3 @@
-import React from "react";
-
 import FavoriteIcon from "../../../../components/common/FavoriteIcon/FavoriteIcon";
 
 const TitleGroup = ({ movieTitle, isFavorite, toggleFavorite, movieId }) => (

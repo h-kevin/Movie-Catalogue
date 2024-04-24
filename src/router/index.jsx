@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import useFavoriteMovies from "../hooks/useFavoriteMovies";
@@ -11,7 +10,7 @@ import TopMovies from "../screens/TopMovies/TopMovies";
 import MovieDetails from "../screens/MovieDetails/MovieDetails";
 import NotFound from "../screens/NotFound/NotFound";
 
-const router = () => {
+const Router = () => {
   const favoriteMoviesContext = useFavoriteMovies();
 
   return (
@@ -38,4 +37,4 @@ const router = () => {
   );
 };
 
-export default router;
+export default Router;
